@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>C++/C# 作品</title>
+	<style type="text/css">
+		body{
+			background-image: url("./images/bg_koc_white.png");
+			background-size: 18%;
+			background-color: #FF1919;
+		}
+		p{
+			width:fit-content;
+		}
+	</style>
+  </head>
+  <body>
+	<h1>C++/C# 作品:</h1>
+	<h3>一、牌七-撲克牌桌遊</h3>
+	<p>Server端:<br>
+		使用C++撰寫Server端程式。<br>
+		使用Socket與Client端進行連線。<br>
+		使用Multi-Process管理Client端之玩家。<br>
+	</p>
+	<p>Client端:<br>
+		使用C#撰寫Client端程式。<br>
+		Button功能說明:<br>
+		1.Connect:透過TCP Socket與Server端連線。<br>
+		2.Recv Handcard:從Server端獲取手牌。<br>
+		3.Set Table:顯示牌桌，初始化為撲克牌之背面。<br>
+		4.Discard:判斷可出牌時，玩家手動進行出牌。<br>
+		5.Foldcard:判斷不可出牌，需蓋牌時，玩家手動進行蓋牌。<br>
+		6.Auto:電腦自動模擬出牌或蓋牌，直到52張牌出完為止，遊戲結束。<br>
+		7.Recv Score:從Server端獲取本次遊戲的結果，顯示蓋牌分數與遊戲贏家。<br>
+	</p>
+	<p>牌七Sevens 演示影片:<br>
+	<video width="500" height="300" controls>
+		<source src="videos/7sevens.mp4" type="video/mp4" />
+	</video><br>
+	牌七SEVENS-遊戲開始畫面 :<br>
+	<img src="images/sevens_00.png" alt="begin screen"  width="500" height="300"><br>
+	1.Connect 按鈕 : 透過TCP Socket與Server端連線。<br>
+	<img src="images/sevens_01.png" alt="connect"  width="500" height="300"><br>
+	2.Recv Handcard 按鈕 : 從Server端獲取手牌。<br>
+	<img src="images/sevens_02.png" alt="recv handcard"  width="500" height="300"><br>
+	3.Set Table 按鈕 : 顯示牌桌，初始化為撲克牌之背面。<br>
+	<img src="images/sevens_03.png" alt="set table"  width="500" height="300"><br>
+	4.Auto 按鈕 : 電腦自動模擬出牌或蓋牌，直到52張牌出完為止，遊戲結束。<br>
+	<img src="images/sevens_04.png" alt="auto"  width="500" height="300"><br>
+	5.Recv Score 按鈕 : 從Server端獲取本次遊戲的結果，顯示蓋牌分數與遊戲贏家。(此例為左方玩家Player 2獲勝，蓋牌之失分較小，為35分)<br>
+	<img src="images/sevens_05.png" alt="recv score"  width="1000" height="300"><br><br>
+	
+	<a href="javascript:history.back()">回上一頁</a><span> </span><a href="#">回到頁首</a>
+	
+	<script type="text/javascript">
+		function changebackground(){
+			var colors = ['#FFFFFF','#FBFF87','#92EAFC','#6DFAD7','#D79DE3'];
+			var random_color = colors[Math.floor(Math.random() * colors.length)];
+			
+			//change background color of all <p>
+			var as = document.querySelectorAll('a');
+			for (var i=0; i < as.length; i++){
+			  as[i].style.backgroundColor = random_color;
+			}
+			
+			//change background color of all <p>
+			var ps = document.querySelectorAll('p');
+			for (var i=0; i < ps.length; i++){
+			  ps[i].style.backgroundColor = random_color;
+			}
+			
+			//change background color of <body> 
+			document.body.style.backgroundColor = random_color;
+			style.backgroundColor = random_color;
+		}
+		changebackground();
+	</script>
+  </body>
+</html>

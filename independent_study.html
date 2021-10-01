@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>專題作品</title>
+	<style type="text/css">
+		body{
+			background-image: url("./images/bg_koc_white.png");
+			background-size: 18%;
+			background-color: #FF1919;
+		}
+		p{
+			width:fit-content;
+		}
+	</style>
+  </head>
+  <body>
+    <h1>專題作品:</h1>
+	<h3>
+		二創短片推薦優化系統。<br>
+		採用MVC架構。<br>
+	</h3>
+	<h3>一、簡介</h3>
+	
+	<p>
+		1.View:使用 HTML/CSS/JavaScript 實作使用者介面。<br>
+	</p>
+	
+	<p>
+		2.Model:使用 Python 實作推薦系統模型。<br>
+		  i.影像:使用 OpenCV 擷取影像特徵。<br>
+		  ii.音訊:使用 Librosa 擷取音訊特徵。<br>
+		  iii.字幕:使用 Jieba 進行斷詞與詞頻分析。<br>
+	</p>
+	
+	<p>
+		3.Controller:使用 PHP 實作View與Model之間的溝通。<br>
+	</p>
+	
+	<p>
+		4.Database:使用 MySQL 實作建立使用者的基本資料與紀錄使用者對影片之評分。<br>
+	</p>
+	
+	<p>
+		5.Data Visualization:使用 Python Matplotlib 繪製折線圖、直方圖、變異數、標準差。<br>
+	</p>
+	
+	<h3>二、專題報告書介紹</h3>
+	<h3>1.摘要</h3>
+	<p>
+		影音平台日漸興盛，影片種類繁多，影片內容也因此分眾化，然而現今各大影音平台對於分眾化影片的推薦模式並不完善。<br>
+		是以我們的專題將探討在既有的推薦系統上，加入最大的中文二創影音平台──bilibili特有的彈幕文字與自彈幕衍生出的標籤作為特徵<br>
+		，對於推薦結果所能帶來的影響。<br>
+	</p>
+	
+	<h3>2.系統介紹</h3>
+	<p>
+		推薦系統<br>
+		i.非個人化推薦流程：<br>
+		<img src="images/is_2-1.png" alt="非個人化推薦"  width="500" height="150"><br>
+	</p>
+	
+	<p>
+		ii.使用者協同過濾推薦流程：<br>
+		<img src="images/is_2-2.png" alt="使用者協同過濾推薦"  width="500" height="200"><br>
+	</p>
+	
+	<p>
+		iii.情境感知推薦流程：<br>
+		<img src="images/is_2-3.png" alt="情境感知推薦"  width="500" height="200"><br>
+	</p>
+	
+	<h3>3.使用者介面</h3>
+	<img src="images/is_3.png" alt="使用者協同過濾推薦"  width="700" height="300"><br>
+	
+	<h3>4.此系統之優點</h3>
+	<p>
+		優化既有特徵擷取：<br>
+		i.彈幕：<br>
+		彈幕是使用者觀看影片後立即的回饋，因此彈幕比台詞對用戶更具代表性。<br>
+		ii.標籤：<br>
+		標籤是衍生自彈幕，將使用者回饋做第二次的淬鍊。<br>
+		<img src="images/is_4-1.png" alt="既有特徵擷取之優化"  width="300" height="200"><br>
+	</p>
+	
+	<p>
+		優化既有推薦方法（比較precision）：<br>
+		i.非個人化推薦：新增彈幕和標籤特徵比較影片相似度再進行推薦。<br>
+		<img src="images/is_4-2.png" alt="非個人化推薦之優化"  width="700" height="200"><br>
+		ii.個人化推薦：在使用者協同過濾上，新增彈幕和標籤特徵重新排序再進行推薦。<br>
+		<img src="images/is_4-3.png" alt="個人化推薦之優化"  width="700" height="170"><br>
+	</p>
+	
+	<h3>5.結論</h3>
+	<p>
+		專題題目鎖定了目前較少相關研究的領域，以與二次元主題相關的影片做為實作範圍，<br>
+		針對影像色彩分布、音訊特徵與彈幕特徵相似度去分析，藉由加入彈幕與標籤使得推薦效果有顯著提升。<br>
+	</p>
+	<a href="javascript:history.back()">回上一頁</a><span> </span><a href="#">回到頁首</a>
+	
+	<script type="text/javascript">
+		function changebackground(){
+			var colors = ['#FFFFFF','#FBFF87','#92EAFC','#6DFAD7','#D79DE3'];
+			var random_color = colors[Math.floor(Math.random() * colors.length)];
+			
+			//change background color of all <p>
+			var as = document.querySelectorAll('a');
+			for (var i=0; i < as.length; i++){
+			  as[i].style.backgroundColor = random_color;
+			}
+			
+			//change background color of all <p>
+			var ps = document.querySelectorAll('p');
+			for (var i=0; i < ps.length; i++){
+			  ps[i].style.backgroundColor = random_color;
+			}
+			
+			//change background color of <body> 
+			document.body.style.backgroundColor = random_color;
+			style.backgroundColor = random_color;
+		}
+		changebackground();
+	</script>
+  </body>
+</html>

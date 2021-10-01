@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Python 作品</title>
+	<style type="text/css">
+		body{
+			background-image: url("./images/bg_koc_white.png");
+			background-size: 18%;
+			background-color: #FF1919;
+		}
+		p{
+			width:fit-content;
+		}
+	</style>
+  </head>
+  <body>
+    <h1>Python 作品:</h1>
+	<h3>一、爬蟲:</h3>
+	<p>
+		1.爬取Pixiv上繪師的追蹤者id<br>
+		使用Cookie登入，爬取Pixiv上繪師(此以用戶id: 45176599 為例)的追蹤者id，並輸出 userId_of_following.csv。<br>
+		<a href="https://www.pixiv.net/users/45176599" target="_blank" title="45176599之Pixiv">範例繪師之Pixiv</a>
+	</p>
+	
+	<p>
+		2.異步爬取Pixiv繪師之所有插圖<br>
+		使用Asyncio、BeautifulSoup，異步爬取Pixiv上繪師(此以用戶id: 45176599 為例)之所有插圖，並以Tqdm顯示當前進度條。<br>
+	</p>
+  
+	<p>
+		3.異步爬取Pixiv追蹤者之委託狀況<br>
+		讀取 userId_of_following.csv，使用Asyncio、BeautifulSoup，異步爬取Pixiv上繪師(此以用戶id: 45176599 為例)的追蹤者之委託狀況<br>
+		，並以Tqdm顯示當前進度條，並輸出 pixiv_request.csv。。(委託類型:插圖、漫畫、動圖)<br>
+	</p>
+	<p>異步爬取Pixiv追蹤者之委託狀況 演示影片:<br>
+	<video width="500" height="300" controls>
+		<source src="videos/check_pixiv_request.mp4" type="video/mp4" />
+	</video><br>
+	<p>pixiv_request.csv 之部分內容:</p>
+	<img src="images/pixiv_request.png" alt="pixiv request"  width="500" height="130"><br>
+	
+	<p>
+		4.爬取寶可夢圖片<br>
+		爬取網站全圖鑑898隻寶可夢之圖片，並依照格式存檔。(命名格式:編號_名稱.png)<br>
+		<a href="https://tw.portal-pokemon.com/play/pokedex" target="_blank" title="寶可夢全圖鑑">範例寶可夢全圖鑑</a>
+	</p>
+	<p>爬取寶可夢圖片 演示影片:<br>
+	<video width="500" height="300" controls>
+		<source src="videos/download_pkm.mp4" type="video/mp4" />
+	</video><br>
+	
+	<p>
+		5.自動登入104人力銀行<br>
+		以Python Selenium 自動登入104人力銀行網站。<br>
+	</p>
+	
+	<h3>二、詞頻統計分析:</h3>
+	<p>
+		目標文檔。<br>
+	</p>
+	<img src="images/word_segmentation_00.png" alt="resource document"  width="500" height="300"><br>
+	
+	<p>
+		1.辭典解釋/例句斷詞<br>
+		1.1利用正則表達式從目標文檔擷取解釋和例句。<br>
+		1.2使用jieba套件對解釋和例句進行斷詞，並且清除不需要的停用詞。<br>
+	</p>
+	<img src="images/word_segmentation_01.png" alt="word segmentation"  width="500" height="300"><br>
+	
+	<p>
+		2.辭典解釋/例句斷詞統計分析<br>
+		依據詞頻的高低對斷詞結果進行分級。<br>
+		統計出已分類詞數(不含重複)、未分類詞數(不含重複)、總詞數(不含重複)、總詞數(含重複)之比例。<br>
+	</p>
+	<img src="images/word_segmentation_02.png" alt="result analysis"  width="1000" height="100"><br><br>
+  
+	<a href="javascript:history.back()">回上一頁</a><span> </span><a href="#">回到頁首</a>
+	
+	<script type="text/javascript">
+		function changebackground(){
+			var colors = ['#FFFFFF','#FBFF87','#92EAFC','#6DFAD7','#D79DE3'];
+			var random_color = colors[Math.floor(Math.random() * colors.length)];
+			
+			//change background color of all <p>
+			var as = document.querySelectorAll('a');
+			for (var i=0; i < as.length; i++){
+			  as[i].style.backgroundColor = random_color;
+			}
+			
+			//change background color of all <p>
+			var ps = document.querySelectorAll('p');
+			for (var i=0; i < ps.length; i++){
+			  ps[i].style.backgroundColor = random_color;
+			}
+			
+			//change background color of <body> 
+			document.body.style.backgroundColor = random_color;
+			style.backgroundColor = random_color;
+		}
+		changebackground();
+	</script>
+  </body>
+</html>
