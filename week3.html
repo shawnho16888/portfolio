@@ -67,6 +67,10 @@
 			  }
 			xmlhttp.open("GET","ajax_info.txt",true);
 			xmlhttp.send();
+			
+			xmlhttp.open("POST","phpwrite2.php",true);
+			xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			xmlhttp.send("name=Joel");
 		}
 	</script>
 	
