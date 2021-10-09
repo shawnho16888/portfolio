@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Week3 課程</title>
+	<style type="text/css">
+		body{
+			background-image: url("./images/bg_koc_white.png");
+			background-size: 18%;
+		}
+		p{
+			width:fit-content;
+		}
+	</style>
+  </head>
+  <body>
+    <h1>Week3 課程</h1>
+	<h3>一、fChart流程圖:</h3>
+	<p>
+		目標:判斷使用者輸入的成績，當成績 >= 90時，輸出等第:優等;當成績 >= 80時，輸出等第:甲等;當成績 < 80時，輸出等第:乙等<br>
+		Input:學生成績<br>
+		Output:等第<br>
+	</p>
+	<img src="images/week3/fChart_img1.png" alt="result analysis"  width="500" height="300"><br><br>
+	
+	<h3>二、App inventor: HW7_three_way</h3>
+	<p>
+		three way表示流程圖的判斷有三個可能的結果，產生三條路徑。<br>
+	</p>
+	
+	<p>
+		Blocks:<br>
+	</p>
+	<img src="images/week3/blocks_img1.png" alt="result analysis"  width="500" height="300"><br><br>
+	
+	<p>
+		Designer:<br>
+	</p>
+	<img src="images/1006.png" alt="result analysis"  width="1000" height="100"><br><br>
+	
+	<h3>三、Python: HW7_three_way</h3>
+	<img src="images/week3/python_code_img1.png" alt="result analysis"  width="500" height="300"><br><br>
+  
+	<a href="javascript:history.back()">回上一頁</a><span> </span><a href="#">回到頁首</a>
+	
+	<div id="myDiv"><h2>Let AJAX change this text</h2></div>
+	<button type="button" onclick="loadXMLDoc()">Change Content</button>
+	
+	<script type="text/javascript">
+		function loadXMLDoc()
+		{
+			var xmlhttp;
+			if (window.XMLHttpRequest)
+			  {// code for IE7+, Firefox, Chrome, Opera, Safari
+			  xmlhttp=new XMLHttpRequest();
+			  }
+			else
+			  {// code for IE6, IE5
+			  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			  }
+			xmlhttp.onreadystatechange=function()
+			  {
+			  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+				{
+				document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+				}
+			  }
+			xmlhttp.open("GET","ajax_info.txt",true);
+			xmlhttp.send();
+		}
+	</script>
+	
+	<script type="text/javascript">
+		function changebackground(){
+			var colors = ['#FFFFFF','#FBFF87','#92EAFC','#6DFAD7','#D79DE3'];
+			var random_color = colors[Math.floor(Math.random() * colors.length)];
+			
+			//change background color of all <p>
+			var as = document.querySelectorAll('a');
+			for (var i=0; i < as.length; i++){
+			  as[i].style.backgroundColor = random_color;
+			}
+			
+			//change background color of all <p>
+			var ps = document.querySelectorAll('p');
+			for (var i=0; i < ps.length; i++){
+			  ps[i].style.backgroundColor = random_color;
+			}
+			
+			//change background color of <body> 
+			document.body.style.backgroundColor = random_color;
+			style.backgroundColor = random_color;
+		}
+		changebackground();
+	</script>
+  </body>
+</html>
