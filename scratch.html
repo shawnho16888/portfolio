@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Scratch 作品</title>
+	<style type="text/css">
+		body{
+			background-image: url("./images/bg_koc_white.png");
+			background-size: 18%;
+			background-color: #FF1919;
+		}
+		p{
+			width:fit-content;
+		}
+	</style>
+  </head>
+  <body>
+	<h1>Scratch 作品:</h1>
+	<h3>一、動畫主題-迷宮遊戲</h3>
+	
+	迷宮遊戲-開始畫面 :<br>
+	<img src="images/maze_scene1.png" alt="begin screen"  width="500" height="300"><br>
+	
+	迷宮遊戲-進行中畫面 :<br>
+	<img src="images/maze_scene2.png" alt="begin screen"  width="500" height="300"><br>
+	
+	腳色說明:<br>
+	1.玩家 Sponge Bob : 可透過上、下、左、右鍵操控，在迷宮地圖上進行移動。<br>
+	<img src="images/sponge_bob.png" alt="connect"  width="100" height="100"><br>
+	2.解說員 Sandy : 當玩家觸發事件時，會透過撥放語音和顯示文字進行相對應的說明。<br>
+	<img src="images/sandy.png" alt="recv handcard"  width="100" height="100"><br>
+	3.關主 Patrick : 當玩家抵達迷宮終點，並遇見關主時，遊戲結束。<br>
+	<img src="images/patrick.png" alt="set table"  width="100" height="100"><br>
+	4.海洋生物 : 當玩家觸碰到海洋生物時，血量 -10，海洋生物會自行在迷宮中移動，當血量歸零時，則重新開始遊戲。<br>
+	<img src="images/gary.png" alt="set table"  width="60" height="60">
+	<img src="images/crab.png" alt="set table"  width="60" height="60">
+	<img src="images/jellyfish.png" alt="set table"  width="60" height="60"><br>
+	5.硬幣 : 當玩家觸碰到硬幣時，血量 +10，硬幣會隨時間轉動。<br>
+	<img src="images/coin.png" alt="auto"  width="50" height="50"><br>
+	6.氣泡 : 透過Scratch模擬氣泡上浮的狀況<br>
+	<img src="images/bubble.png" alt="recv score"  width="50" height="50"><br><br><br>
+	
+	<h3>二、Google小恐龍遊戲</h3>
+	
+	迷宮遊戲-開始畫面 :<br>
+	<img src="images/dino_scene1.png" alt="begin screen"  width="500" height="300"><br>
+	
+	迷宮遊戲-結束畫面 :<br>
+	<img src="images/dino_scene2.png" alt="begin screen"  width="500" height="300"><br>
+	
+	<a href="javascript:history.back()">回上一頁</a><span> </span><a href="#">回到頁首</a>
+	
+	<script type="text/javascript">
+		function changebackground(){
+			var colors = ['#FFFFFF','#FBFF87','#92EAFC','#6DFAD7','#D79DE3'];
+			var random_color = colors[Math.floor(Math.random() * colors.length)];
+			
+			//change background color of all <p>
+			var as = document.querySelectorAll('a');
+			for (var i=0; i < as.length; i++){
+			  as[i].style.backgroundColor = random_color;
+			}
+			
+			//change background color of all <p>
+			var ps = document.querySelectorAll('p');
+			for (var i=0; i < ps.length; i++){
+			  ps[i].style.backgroundColor = random_color;
+			}
+			
+			//change background color of <body> 
+			document.body.style.backgroundColor = random_color;
+			style.backgroundColor = random_color;
+		}
+		changebackground();
+	</script>
+  </body>
+</html>
