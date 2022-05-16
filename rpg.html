@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RPG-2D遊戲 作品</title>
+	<style type="text/css">
+		body{
+			background-image: url("./images/bg_koc_white.png");
+			background-size: 18%;
+			background-color: #FF1919;
+		}
+		p{
+			width:fit-content;
+		}
+	</style>
+  </head>
+  <body>
+    <h1>RPG-2D遊戲 作品:</h1>
+	<h3>一、遊戲說明:</h3>
+	<p>
+		這款RPG遊戲命名為「語Easy」，目標是以寓教於樂的方式，將日文學習融入遊戲體驗中。<br>
+		讓玩家以日本旅遊的方式，採用日語語音和對話，搭配中文翻譯，並在過程中加入小遊戲、迷宮、解謎的活動，讓玩家一邊玩遊戲一邊學習日語。<br>
+		整個遊戲總共有5張主題地圖，以食、衣、住、行、育、樂常用到的日語作為基礎。<br>
+	</p>
+	
+	
+	<h3>二、主題地圖介紹:</h3>
+	<p>
+		1.行-搭乘地鐵:<br>
+		<iframe src="https://drive.google.com/file/d/1XXnlukmKUiCZFuQBQf4ps8zCZ5YlJsiR/preview" width="600" height="400" allow="autoplay"  frameborder="0"></iframe><br>
+	</p>
+  
+	<p>
+		2.住-入住旅館:<br>
+		<iframe src="https://drive.google.com/file/d/1gR-HV7moUYakmd-YbJXPU_R_DO1ecQs6/preview" width="600" height="400" allow="autoplay"  frameborder="0"></iframe><br>
+	</p>
+	
+	<p>
+		3.育-參訪校園:<br>
+		<iframe src="https://drive.google.com/file/d/1c6n2YKfw5JRyZNuOrPwy1sR87ZI-YCPn/preview" width="600" height="400" allow="autoplay"  frameborder="0"></iframe><br>
+		<iframe src="https://drive.google.com/file/d/1g1mWqeEMZQfbwQkcxf3K8q6c2XCnKHT9/preview" width="600" height="400" allow="autoplay"  frameborder="0"></iframe><br>
+	</p>
+	
+	<p>
+		4.樂-參拜神社:<br>
+		<iframe src="https://drive.google.com/file/d/1agG1LnSCo8_eNFaKpYYKsFPftOaOOK4b/preview" width="600" height="400" allow="autoplay"  frameborder="0"></iframe><br>
+	</p>
+	
+	<p>
+		5.樂-體驗溫泉:<br>
+		<iframe src="https://drive.google.com/file/d/1Nfbne-5kkZKGjDuGA4qzs40Vmc6u2nEn/preview" width="600" height="400" allow="autoplay"  frameborder="0"></iframe><br>
+	</p>
+	
+	<a href="javascript:history.back()">回上一頁</a><span> </span><a href="#">回到頁首</a>
+	
+	<script type="text/javascript">
+		function changebackground(){
+			var colors = ['#FFFFFF','#FBFF87','#92EAFC','#6DFAD7','#D79DE3'];
+			var random_color = colors[Math.floor(Math.random() * colors.length)];
+			
+			//change background color of all <p>
+			var as = document.querySelectorAll('a');
+			for (var i=0; i < as.length; i++){
+			  as[i].style.backgroundColor = random_color;
+			}
+			
+			//change background color of all <p>
+			var ps = document.querySelectorAll('p');
+			for (var i=0; i < ps.length; i++){
+			  ps[i].style.backgroundColor = random_color;
+			}
+			
+			//change background color of <body> 
+			document.body.style.backgroundColor = random_color;
+			style.backgroundColor = random_color;
+		}
+		changebackground();
+	</script>
+  </body>
+</html>
